@@ -1,0 +1,1 @@
+INSERT INTO [DB_PREFIX]Admin (profileId, email, name, password) VALUES(1, :email, :name, :password);

@@ -1,0 +1,1 @@
+SELECT password FROM [DB_PREFIX]Admin WHERE email = :email LIMIT 1;

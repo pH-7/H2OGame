@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Game SET score = :score WHERE gameId = :game_id LIMIT 1;

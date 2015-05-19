@@ -1,0 +1,1 @@
+SELECT * FROM [DB_PREFIX]Admin WHERE profileId = :profile_id LIMIT 1;

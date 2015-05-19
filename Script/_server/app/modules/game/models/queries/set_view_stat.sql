@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Game SET views = views+1 WHERE gameId = :game_id LIMIT 1;

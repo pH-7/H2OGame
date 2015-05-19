@@ -1,0 +1,1 @@
+INSERT INTO [DB_PREFIX]Game (categoryId, name, title, description, keywords, thumb, file) VALUES(:category_id, :name, :title, :description, :keywords, :thumb, :file);

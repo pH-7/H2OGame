@@ -1,0 +1,1 @@
+SELECT file FROM [DB_PREFIX]Game WHERE gameId = :game_id LIMIT 1;

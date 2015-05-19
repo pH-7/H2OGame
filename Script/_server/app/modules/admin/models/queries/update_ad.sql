@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Ad SET code = :code WHERE adId = :ad_id LIMIT 1;

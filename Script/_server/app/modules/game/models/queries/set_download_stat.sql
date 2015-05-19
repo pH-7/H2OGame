@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Game SET downloads = downloads+1 WHERE gameId = :game_id LIMIT 1;

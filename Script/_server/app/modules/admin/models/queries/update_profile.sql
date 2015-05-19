@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Admin SET email = :email, name = :name, lang = :lang WHERE profileId = :profile_id LIMIT 1;

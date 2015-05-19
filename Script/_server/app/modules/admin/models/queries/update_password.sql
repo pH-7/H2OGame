@@ -1,0 +1,1 @@
+UPDATE [DB_PREFIX]Admin SET password = :password WHERE profileId = :profile_id LIMIT 1;
