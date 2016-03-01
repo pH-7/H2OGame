@@ -1,7 +1,7 @@
 <?php
 /**
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2014-2015, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2014, Pierre-Henry Soria. All Rights Reserved.
  * @license          See H2O.LICENSE.txt and H2O.COPYRIGHT.txt in the root directory.
  * @link             http://hizup.com
  */
@@ -22,7 +22,7 @@ class Cookie
      */
     public function set($mName, $sValue = null, $iTime = null, $bSecure = null)
     {
-        $iTime = (int) (!empty($iTime)) ? $iTime : Config::COOKIE_EXPIRATION;
+        $iTime = time() + ((int) !empty($iTime) ? $iTime : Config::COOKIE_EXPIRATION);
         $bSecure = (!empty($bSecure) && is_bool($bSecure)) ? $bSecure : (substr(H2O_PROTOCOL, 0, 5) === 'https') ? true : false;
 
         if (is_array($mName))
@@ -36,9 +36,9 @@ class Cookie
 
             /* Check if we are not in localhost mode, otherwise may not work. */
             if (!is_local_host())
-                setcookie($sCookieName, $sValue, time() + $iTime, Config::COOKIE_PATH, Config::COOKIE_DOMAIN, $bSecure, true);
+                setcookie($sCookieName, $sValue, $iTime, Config::COOKIE_PATH, Config::COOKIE_DOMAIN, $bSecure, true);
             else
-                setcookie($sCookieName, $sValue, time() + $iTime, '/');
+                setcookie($sCookieName, $sValue, $iTime, '/');
         }
     }
 

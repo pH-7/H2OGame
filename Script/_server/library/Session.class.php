@@ -1,7 +1,7 @@
 <?php
 /**
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2014-2015, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2014, Pierre-Henry Soria. All Rights Reserved.
  * @license          See H2O.LICENSE.txt and H2O.COPYRIGHT.txt in the root directory.
  * @link             http://hizup.com
  */
@@ -31,7 +31,7 @@ class Session
          */
         if (!is_local_host())
         {
-            $iTime = (int) time() + Config::SESSION_EXPIRATION;
+            $iTime = (int) Config::SESSION_EXPIRATION;
             session_set_cookie_params($iTime, Config::SESSION_PATH, Config::SESSION_DOMAIN, $bSecure, true);
         }
 
