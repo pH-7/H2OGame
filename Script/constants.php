@@ -1,7 +1,7 @@
 <?php
 /**
  * @author           Pierre-Henry Soria <ph7software@gmail.com>
- * @copyright        (c) 2014-2015, Pierre-Henry Soria. All Rights Reserved.
+ * @copyright        (c) 2014-2017, Pierre-Henry Soria. All Rights Reserved.
  * @license          See H2O.LICENSE.txt and H2O.COPYRIGHT.txt in the root directory.
  * @link             http://hizup.com
  */
@@ -20,7 +20,7 @@ define('H2O_WIDTH_SEARCH_FORM', 160);
 define('H2O_ENVIRONMENT', true);
 
 // URL association for SSL and protocol compatibility
-$sHttp = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS'] == 'on')) ? 'https://' : 'http://';
+$sHttp = (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') ? 'https://' : 'http://';
 // Determines the domain name with the port
 $sDomain = ($_SERVER['SERVER_PORT'] != '80') ?  $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] : $_SERVER['SERVER_NAME'];
 // Get domain that the cookie and cookie session is available (Set-Cookie: domain=your_site_name.com)
@@ -36,4 +36,3 @@ define('H2O_PUBLIC_DATA_URL', H2O_ROOT_URL  . 'data' . '/');
 define('H2O_ROOT_PATH', __DIR__ . H2O_DS); // PUBLIC ROOT
 define('H2O_SERVER_PATH', H2O_ROOT_PATH . '_server' . H2O_DS);
 define('H2O_PUBLIC_DATA_PATH', H2O_ROOT_PATH . 'data' . H2O_DS);
-
